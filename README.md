@@ -34,5 +34,7 @@
 ![cell image](histogram.png)
 
 ## Create seperate masks for each cell
+![cell image](seperate_masks.png)
+
 ![cell image](cell_seperation.png)
 
