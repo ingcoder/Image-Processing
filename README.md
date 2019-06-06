@@ -46,7 +46,26 @@
 
 ![cell image](histogram.png)
 
-## Create Seperate Masks for Each Cell
+## Create Seperate Mask for Each Cell
+    from scipy import ndimage
+    import math
+    labels, nlabels = ndimage.label(maskimg)
+
+    #Create seperate mask for each label and store in list
+    def make_individual_masks(labels, nlabels):
+        mask_list = []
+
+        for counter, coord in enumerate(ndimage.find_objects(labels)):
+            #If cell is not to small, create single mask and add to list
+            cell = maskimg[coord]  
+            if np.product(cell.shape) > 90:
+                label_mask = np.where(labels == counter+1, 1, 0) 
+                mask_list.append(label_mask)  
+            else:
+                continue
+
+        return mask_list
+
 ![cell image](seperate_masks.png)
 
 ![cell image](cell_seperation.png)
