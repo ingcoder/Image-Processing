@@ -28,3 +28,9 @@
     print('New Image Shape',grayimg.shape)
 
 ![cell image](cell_image.png)
+
+## Image Segmentation by Intensity Thresholding 
+
+![cell image](histogram.png)
+
+
