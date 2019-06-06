@@ -1,5 +1,5 @@
 # Image-Processing
-## Load single image into pyplot
+## Show Single Cell Image with pyplot
 
     #Import listdirectory function from OS module
     from os import listdir
@@ -33,8 +33,9 @@
 
 ![cell image](histogram.png)
 
-## Create seperate masks for each cell
+## Create Seperate Masks for Each Cell
 ![cell image](seperate_masks.png)
 
 ![cell image](cell_seperation.png)
 
+## Compress Image Data with Run Line Encoding
