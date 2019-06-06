@@ -30,9 +30,9 @@
 ![cell image](cell_image.png)
 
 ## Image Segmentation by Intensity Thresholding
-
-    #Removing Background
-    #Okay let's look at the distribution of the intensity values of all the pixels
+    
+    from skimage.filters import threshold_otsu
+    #Find Threshold and Removing Background
     plt.figure(figsize=(10,5))
     plt.subplot(1,2,1)
     sns.distplot(grayimg.flatten(), kde=False)
@@ -40,6 +40,9 @@
     plt.subplot(1,2,2)
     sns.distplot(grayimg.flatten(), kde=False)
     plt.ylim(0,15000)
+
+    thresh_value = threshold_otsu(grayimg)
+    mask = np.where(grayimg > thresh_value, 1, 0)
 
 ![cell image](histogram.png)
 
