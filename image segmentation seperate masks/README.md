@@ -66,7 +66,7 @@
 
         return mask_list
 
-![cell image](seperate_masks.png)
+![cell image](images/seperate_masks.png)
 
 ![cell image](cell_seperation.png)
 
