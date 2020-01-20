@@ -27,7 +27,7 @@
     plt.imshow(grayimg, cmap='gray')
     print('New Image Shape',grayimg.shape)
 
-![cell image](cell_image.png)
+![cell image](images/cell_image.png)
 
 ## Image Segmentation by Intensity Thresholding
     
@@ -44,7 +44,7 @@
     thresh_value = threshold_otsu(grayimg)
     mask = np.where(grayimg > thresh_value, 1, 0)
 
-![cell image](histogram.png)
+![cell image](images/histogram.png)
 
 ## Create Seperate Mask for Each Cell
     from scipy import ndimage
@@ -68,6 +68,6 @@
 
 ![cell image](images/seperate_masks.png)
 
-![cell image](cell_seperation.png)
+![cell image](images/cell_seperation.png)
 
 ## Compress Image Data with Run Line Encoding
